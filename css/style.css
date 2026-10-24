@@ -25,6 +25,14 @@ html {
   font-size: 16px;
 }
 
+/* Visibility safety: if JS is disabled or not yet initialized, keep content visible */
+html:not(.js) [data-aos],
+[data-aos].aos-fallback-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--text-dark);

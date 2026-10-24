@@ -6,15 +6,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize AOS (Animate On Scroll) if available
+  let aosLoaded = false;
   if (typeof AOS !== 'undefined') {
-    AOS.init({
-      once: true,
-      duration: 750,
-      easing: 'ease-out-cubic',
-      offset: 50,
-      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    });
+    try {
+      AOS.init({
+        once: true,
+        duration: 750,
+        easing: 'ease-out-cubic',
+        offset: 50,
+        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      });
+      aosLoaded = true;
+    } catch (err) {
+      console.warn('AOS initialization note:', err);
+    }
   }
+
+  // Safety Fallback: Reveal every [data-aos] element after 1.5 seconds if AOS did not initialize
+  setTimeout(() => {
+    document.querySelectorAll('[data-aos]').forEach((el) => {
+      if (!el.classList.contains('aos-animate')) {
+        el.classList.add('aos-animate');
+        el.classList.add('aos-fallback-visible');
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.visibility = 'visible';
+      }
+    });
+  }, 1500);
 
   // 2. Scroll Progress & Navbar Transparency Transition
   const mainNavbar = document.getElementById('mainNavbar');

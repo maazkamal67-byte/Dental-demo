@@ -10,6 +10,11 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Inline Script to add 'js' class to html element -->
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+
   <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,12 +27,55 @@
   <!-- AOS (Animate On Scroll, CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css" />
+  <!-- Custom Stylesheet (Pure Relative Path) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Noscript Fallback for AOS visibility -->
+  <noscript>
+    <style>
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
-  <!-- Injected Reusable Navbar -->
-  <div id="navbar-container"></div>
+  <!-- Navbar Container (With Fallback HTML) -->
+  <div id="navbar-container">
+    <nav class="navbar navbar-expand-lg site-navbar transparent" id="mainNavbar">
+      <div class="container">
+        <a class="brand-mark" href="index.html" aria-label="Smile Haven Dental Home">
+          <div class="brand-icon-wrapper" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8 2 6 5 6 9c0 4 1 7 2 11 1 3 3 2 4 0 1 2 3 3 4 0 1-4 2-7 2-11 0-4-2-7-6-7z"/>
+              <path d="M9 10c1 0 2-1 3-1s2 1 3 1"/>
+            </svg>
+          </div>
+          <span class="brand-text">Smile Haven Dental</span>
+        </a>
+        <button class="navbar-toggler border-0 p-2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#fallbackNav" aria-controls="fallbackNav" aria-label="Toggle navigation menu">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="fallbackNav">
+          <ul class="navbar-nav align-items-center gap-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <a href="tel:0000000000" class="nav-phone-link"><i class="bi bi-telephone text-teal"></i> 0000 000 0000</a>
+          <a href="contact.html" class="btn-primary-teal btn-pulse btn-shine">Book Appointment</a>
+        </div>
+      </div>
+    </nav>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero-wrapper" aria-label="Hero Introduction">
@@ -45,7 +93,6 @@
 
     <div class="container hero-content">
       <div class="row align-items-center g-5">
-        <!-- Hero Text & Primary Actions -->
         <div class="col-lg-7" data-aos="fade-up" data-aos-duration="850">
           <span class="custom-breadcrumb mb-3" style="background: rgba(255,255,255,0.12); color: #FFFFFF;">
             <i class="bi bi-shield-check text-teal"></i> Patient-Centred Oral Health
@@ -66,36 +113,24 @@
           </div>
         </div>
 
-        <!-- Floating Glass Feature Cards -->
         <div class="col-lg-5" data-aos="fade-left" data-aos-duration="950" data-aos-delay="150">
           <div class="floating-cards-stack">
-            <!-- Card 1 -->
             <div class="floating-glass-card card-anim-1">
-              <div class="float-icon" aria-hidden="true">
-                <i class="bi bi-heart-pulse"></i>
-              </div>
+              <div class="float-icon" aria-hidden="true"><i class="bi bi-heart-pulse"></i></div>
               <div class="float-text">
                 <h5>Gentle Care</h5>
                 <p>Thoughtful pacing and attentive techniques for anxious patients.</p>
               </div>
             </div>
-
-            <!-- Card 2 -->
             <div class="floating-glass-card card-anim-2">
-              <div class="float-icon" aria-hidden="true">
-                <i class="bi bi-cpu"></i>
-              </div>
+              <div class="float-icon" aria-hidden="true"><i class="bi bi-cpu"></i></div>
               <div class="float-text">
                 <h5>Modern Equipment</h5>
                 <p>Digital imaging and low-noise instruments for optimal comfort.</p>
               </div>
             </div>
-
-            <!-- Card 3 -->
             <div class="floating-glass-card card-anim-3">
-              <div class="float-icon" aria-hidden="true">
-                <i class="bi bi-people"></i>
-              </div>
+              <div class="float-icon" aria-hidden="true"><i class="bi bi-people"></i></div>
               <div class="float-text">
                 <h5>Family Friendly</h5>
                 <p>A welcoming setting tailored for children, adults, and seniors.</p>
@@ -126,12 +161,9 @@
       </div>
 
       <div class="row g-4">
-        <!-- Service 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-check2-circle"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
             <h3 class="service-card-title">Check-ups & Cleaning</h3>
             <p class="service-card-desc">
               Comprehensive oral examinations, gentle plaque removal, and preventative advice to keep your teeth and gums healthy.
@@ -142,12 +174,9 @@
           </div>
         </div>
 
-        <!-- Service 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-patch-check"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-patch-check"></i></div>
             <h3 class="service-card-title">Restorative Fillings</h3>
             <p class="service-card-desc">
               Tooth-coloured composite fillings designed to repair minor decay and support natural tooth structure seamlessly.
@@ -158,12 +187,9 @@
           </div>
         </div>
 
-        <!-- Service 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-brightness-high"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-brightness-high"></i></div>
             <h3 class="service-card-title">Teeth Whitening</h3>
             <p class="service-card-desc">
               Carefully managed in-clinic and custom take-home whitening treatments focused on preserving enamel and gum health.
@@ -174,12 +200,9 @@
           </div>
         </div>
 
-        <!-- Service 4 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-shield-shaded"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-shield-shaded"></i></div>
             <h3 class="service-card-title">Dental Implants</h3>
             <p class="service-card-desc">
               Long-term tooth replacement options planned with precision digital diagnostics to restore balanced chewing and appearance.
@@ -190,12 +213,9 @@
           </div>
         </div>
 
-        <!-- Service 5 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-grid-3x3"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-grid-3x3"></i></div>
             <h3 class="service-card-title">Clear Aligners</h3>
             <p class="service-card-desc">
               Subtle orthodontic solutions utilizing custom transparent trays to guide teeth into balanced alignment comfortably.
@@ -206,12 +226,9 @@
           </div>
         </div>
 
-        <!-- Service 6 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="custom-card">
-            <div class="service-icon-box" aria-hidden="true">
-              <i class="bi bi-emoji-smile"></i>
-            </div>
+            <div class="service-icon-box" aria-hidden="true"><i class="bi bi-emoji-smile"></i></div>
             <h3 class="service-card-title">Children's Dentistry</h3>
             <p class="service-card-desc">
               A gentle, playful introduction to dental visits focused on positive habits, decay prevention, and building trust.
@@ -223,7 +240,6 @@
         </div>
       </div>
 
-      <!-- Link to all services -->
       <div class="text-center mt-5" data-aos="fade-up">
         <a href="services.html" class="btn-primary-teal btn-shine">
           <span>View All 8 Services</span>
@@ -265,55 +281,35 @@
 
         <div class="col-lg-7" data-aos="fade-left">
           <div class="row g-4">
-            <!-- Point 1 -->
             <div class="col-sm-6">
               <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
-                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
-                  <i class="bi bi-clock-history"></i>
-                </div>
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true"><i class="bi bi-clock-history"></i></div>
                 <h4 class="feature-title">Unhurried Consultations</h4>
-                <p class="feature-text">
-                  We take ample time to listen, address your questions, and explain each step before beginning any treatment.
-                </p>
+                <p class="feature-text">We take ample time to listen, address your questions, and explain each step before beginning any treatment.</p>
               </div>
             </div>
 
-            <!-- Point 2 -->
             <div class="col-sm-6">
               <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
-                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
-                  <i class="bi bi-file-earmark-text"></i>
-                </div>
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
                 <h4 class="feature-title">Transparent Treatment Plans</h4>
-                <p class="feature-text">
-                  Clear written options and explanations provided in plain language, so you remain fully in control of your care.
-                </p>
+                <p class="feature-text">Clear written options and explanations provided in plain language, so you remain fully in control of your care.</p>
               </div>
             </div>
 
-            <!-- Point 3 -->
             <div class="col-sm-6">
               <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
-                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
-                  <i class="bi bi-flower1"></i>
-                </div>
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true"><i class="bi bi-flower1"></i></div>
                 <h4 class="feature-title">Calming Clinical Environment</h4>
-                <p class="feature-text">
-                  Soft ambient lighting, quiet instruments, and ergonomic chairs designed to help reduce sensory tension.
-                </p>
+                <p class="feature-text">Soft ambient lighting, quiet instruments, and ergonomic chairs designed to help reduce sensory tension.</p>
               </div>
             </div>
 
-            <!-- Point 4 -->
             <div class="col-sm-6">
               <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
-                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
-                  <i class="bi bi-shield-heart"></i>
-                </div>
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true"><i class="bi bi-shield-heart"></i></div>
                 <h4 class="feature-title">Preventative Focus</h4>
-                <p class="feature-text">
-                  Thoughtful preventative advice and early maintenance that helps you preserve your natural teeth for a lifetime.
-                </p>
+                <p class="feature-text">Thoughtful preventative advice and early maintenance that helps you preserve your natural teeth for a lifetime.</p>
               </div>
             </div>
           </div>
@@ -334,47 +330,32 @@
       </div>
 
       <div class="row g-4">
-        <!-- Step 1 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
           <div class="timeline-step-card">
             <div class="timeline-step-badge">1</div>
             <h4 class="timeline-step-title">Warm Welcome</h4>
-            <p class="timeline-step-text">
-              Check in with our friendly reception team and relax in our quiet, serene waiting lounge with refreshment options.
-            </p>
+            <p class="timeline-step-text">Check in with our friendly reception team and relax in our quiet, serene waiting lounge with refreshment options.</p>
           </div>
         </div>
-
-        <!-- Step 2 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
           <div class="timeline-step-card">
             <div class="timeline-step-badge">2</div>
             <h4 class="timeline-step-title">Comprehensive Check</h4>
-            <p class="timeline-step-text">
-              A gentle examination of teeth, gums, and soft tissues alongside digital imaging only where clinically necessary.
-            </p>
+            <p class="timeline-step-text">A gentle examination of teeth, gums, and soft tissues alongside digital imaging only where clinically necessary.</p>
           </div>
         </div>
-
-        <!-- Step 3 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
           <div class="timeline-step-card">
             <div class="timeline-step-badge">3</div>
             <h4 class="timeline-step-title">Collaborative Plan</h4>
-            <p class="timeline-step-text">
-              We review findings together on screen, discuss your oral health goals, and outline potential options without rush.
-            </p>
+            <p class="timeline-step-text">We review findings together on screen, discuss your oral health goals, and outline potential options without rush.</p>
           </div>
         </div>
-
-        <!-- Step 4 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
           <div class="timeline-step-card">
             <div class="timeline-step-badge">4</div>
             <h4 class="timeline-step-title">Care at Your Pace</h4>
-            <p class="timeline-step-text">
-              Any recommended care is scheduled entirely according to your timeline and preferences, keeping you comfortable.
-            </p>
+            <p class="timeline-step-text">Any recommended care is scheduled entirely according to your timeline and preferences, keeping you comfortable.</p>
           </div>
         </div>
       </div>
@@ -416,7 +397,6 @@
       <div class="row justify-content-center">
         <div class="col-lg-9" data-aos="fade-up">
           <div class="accordion custom-accordion" id="homeFaqAccordion">
-            <!-- FAQ 1 -->
             <div class="accordion-item">
               <h3 class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -430,7 +410,6 @@
               </div>
             </div>
 
-            <!-- FAQ 2 -->
             <div class="accordion-item">
               <h3 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -444,7 +423,6 @@
               </div>
             </div>
 
-            <!-- FAQ 3 -->
             <div class="accordion-item">
               <h3 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -470,15 +448,66 @@
     </div>
   </section>
 
-  <!-- Injected Reusable Footer -->
-  <div id="footer-container"></div>
+  <!-- Footer Container (With Fallback HTML) -->
+  <div id="footer-container">
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,20 1200,50 L1200,120 L0,120 Z" fill="#0B2545"></path>
+      </svg>
+    </div>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4 col-md-6">
+            <h3 class="footer-brand-title mb-0">Smile Haven Dental</h3>
+            <p class="footer-blurb mt-2">Providing calm, gentle dental care in a welcoming, unhurried atmosphere. Dedicated to long-term oral health and patient comfort.</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="gallery.html">Clinic Gallery</a></li>
+              <li><a href="faq.html">Common Questions</a></li>
+              <li><a href="contact.html">Contact & Booking</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <h4 class="footer-heading">Services</h4>
+            <ul class="footer-links">
+              <li><a href="services.html">Check-ups & Cleaning</a></li>
+              <li><a href="services.html">Restorative Fillings</a></li>
+              <li><a href="services.html">Teeth Whitening</a></li>
+              <li><a href="services.html">Dental Implants</a></li>
+              <li><a href="services.html">Clear Aligners</a></li>
+              <li><a href="services.html">Children's Dentistry</a></li>
+              <li><a href="services.html">Emergency Dental Care</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="footer-heading">Sample Clinic Info</h4>
+            <div class="footer-contact-item"><i class="bi bi-geo-alt"></i> <span>123 Sample Street, Your City</span></div>
+            <div class="footer-contact-item"><i class="bi bi-telephone"></i> <a href="tel:0000000000" class="text-white text-decoration-none">0000 000 0000</a></div>
+            <div class="footer-contact-item"><i class="bi bi-envelope"></i> <a href="mailto:hello@example.com" class="text-white text-decoration-none">hello@example.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start">
+          <div>&copy; 2026 Smile Haven Dental. Sample website, concept demo.</div>
+          <div class="footer-disclaimer">Content on this site is placeholder text for demonstration purposes only.</div>
+        </div>
+      </div>
+    </footer>
+    <button id="btn-back-to-top" type="button" aria-label="Scroll back to top"><i class="bi bi-arrow-up"></i></button>
+  </div>
 
-  <!-- Bootstrap 5 JS Bundle (CDN) -->
+  <!-- CDN Scripts loaded at end of body in exact required order -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <!-- Site Components & Logic -->
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

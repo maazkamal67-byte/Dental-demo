@@ -2,5 +2,7 @@
   "name": "Smile Haven Dental",
   "description": "Premium dental clinic portfolio concept demo featuring multi-page navigation, service catalogue, team profiles, interactive gallery lightbox, FAQ search, and appointment scheduling.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
