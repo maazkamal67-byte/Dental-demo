@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smile Haven Dental | Gentle, Modern Care</title>
+  <meta name="description" content="Smile Haven Dental is a fictional portfolio dental practice concept offering calm, gentle dental care in a welcoming and unhurried environment." />
+  <meta property="og:title" content="Smile Haven Dental | Gentle, Modern Care" />
+  <meta property="og:description" content="Experience a calm, unhurried dental clinic concept focused on preventative care, comfort, and patient clarity." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll, CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Injected Reusable Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-wrapper" aria-label="Hero Introduction">
+    <div class="hero-bg-container" aria-hidden="true">
+      <img 
+        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" 
+        alt="Calm and modern dental clinic treatment room" 
+        class="hero-bg-img"
+        width="1200" 
+        height="800"
+        onerror="this.onerror=null;this.classList.add('img-fallback');"
+      />
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text & Primary Actions -->
+        <div class="col-lg-7" data-aos="fade-up" data-aos-duration="850">
+          <span class="custom-breadcrumb mb-3" style="background: rgba(255,255,255,0.12); color: #FFFFFF;">
+            <i class="bi bi-shield-check text-teal"></i> Patient-Centred Oral Health
+          </span>
+          <h1 class="hero-title">Gentle, modern dental care designed around you</h1>
+          <p class="hero-lead">
+            Experience a calm, unhurried dental environment where comfort, clarity, and comprehensive oral health come first. We believe every visit should be reassuring and respectful.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="contact.html" class="btn-primary-teal btn-pulse btn-shine">
+              <span>Book Appointment</span>
+              <i class="bi bi-calendar2-check"></i>
+            </a>
+            <a href="services.html" class="btn-outline-custom">
+              <span>Our Services</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Glass Feature Cards -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="950" data-aos-delay="150">
+          <div class="floating-cards-stack">
+            <!-- Card 1 -->
+            <div class="floating-glass-card card-anim-1">
+              <div class="float-icon" aria-hidden="true">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+              <div class="float-text">
+                <h5>Gentle Care</h5>
+                <p>Thoughtful pacing and attentive techniques for anxious patients.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="floating-glass-card card-anim-2">
+              <div class="float-icon" aria-hidden="true">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <div class="float-text">
+                <h5>Modern Equipment</h5>
+                <p>Digital imaging and low-noise instruments for optimal comfort.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="floating-glass-card card-anim-3">
+              <div class="float-icon" aria-hidden="true">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="float-text">
+                <h5>Family Friendly</h5>
+                <p>A welcoming setting tailored for children, adults, and seniors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider into Services Preview -->
+  <div class="wave-divider" aria-hidden="true" style="background: var(--navy);">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <path d="M0,0 C300,70 600,10 1200,60 L1200,80 L0,80 Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  <!-- Services Preview Section (6 cards) -->
+  <section class="py-5 bg-white" aria-labelledby="services-preview-heading">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-kicker">Comprehensive Care</span>
+        <h2 id="services-preview-heading" class="section-title">Our Dental Services</h2>
+        <p class="section-subtitle">
+          From routine wellness checks to gentle restorative solutions, our treatments are tailored to support your long-term oral well-being.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-check2-circle"></i>
+            </div>
+            <h3 class="service-card-title">Check-ups & Cleaning</h3>
+            <p class="service-card-desc">
+              Comprehensive oral examinations, gentle plaque removal, and preventative advice to keep your teeth and gums healthy.
+            </p>
+            <a href="contact.html?service=Check-ups%20and%20Cleaning" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-patch-check"></i>
+            </div>
+            <h3 class="service-card-title">Restorative Fillings</h3>
+            <p class="service-card-desc">
+              Tooth-coloured composite fillings designed to repair minor decay and support natural tooth structure seamlessly.
+            </p>
+            <a href="contact.html?service=Fillings" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-brightness-high"></i>
+            </div>
+            <h3 class="service-card-title">Teeth Whitening</h3>
+            <p class="service-card-desc">
+              Carefully managed in-clinic and custom take-home whitening treatments focused on preserving enamel and gum health.
+            </p>
+            <a href="contact.html?service=Teeth%20Whitening" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-shield-shaded"></i>
+            </div>
+            <h3 class="service-card-title">Dental Implants</h3>
+            <p class="service-card-desc">
+              Long-term tooth replacement options planned with precision digital diagnostics to restore balanced chewing and appearance.
+            </p>
+            <a href="contact.html?service=Dental%20Implants" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-grid-3x3"></i>
+            </div>
+            <h3 class="service-card-title">Clear Aligners</h3>
+            <p class="service-card-desc">
+              Subtle orthodontic solutions utilizing custom transparent trays to guide teeth into balanced alignment comfortably.
+            </p>
+            <a href="contact.html?service=Braces%20and%20Clear%20Aligners" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="custom-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <h3 class="service-card-title">Children's Dentistry</h3>
+            <p class="service-card-desc">
+              A gentle, playful introduction to dental visits focused on positive habits, decay prevention, and building trust.
+            </p>
+            <a href="contact.html?service=Children%27s%20Dentistry" class="btn btn-sm btn-outline-secondary rounded-pill mt-auto align-self-start">
+              Book this service &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link to all services -->
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="services.html" class="btn-primary-teal btn-shine">
+          <span>View All 8 Services</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider into Mint Section -->
+  <div class="wave-divider" aria-hidden="true" style="background: #FFFFFF;">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,0 C400,60 800,0 1200,45 L1200,60 L0,60 Z" fill="#F2FBFA"></path>
+    </svg>
+  </div>
+
+  <!-- "Why Patients Choose Us" (4 qualitative points, no numbers) -->
+  <section class="py-5 bg-mint" aria-labelledby="why-choose-heading">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="section-kicker">Our Philosophy</span>
+          <h2 id="why-choose-heading" class="section-title">Why patients choose Smile Haven</h2>
+          <p class="mb-4">
+            We understand that visiting the dentist can feel daunting. That is why we have organized every detail of our clinic to prioritize reassurance, clear explanations, and peaceful visits.
+          </p>
+          <div class="rounded-4 overflow-hidden shadow-sm" style="aspect-ratio: 4/3;">
+            <img 
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" 
+              alt="Dentist having a reassuring consultation with patient" 
+              class="w-100 h-100 object-fit-cover"
+              loading="lazy"
+              width="600"
+              height="450"
+              onerror="this.onerror=null;this.classList.add('img-fallback');"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="row g-4">
+            <!-- Point 1 -->
+            <div class="col-sm-6">
+              <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <h4 class="feature-title">Unhurried Consultations</h4>
+                <p class="feature-text">
+                  We take ample time to listen, address your questions, and explain each step before beginning any treatment.
+                </p>
+              </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="col-sm-6">
+              <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <h4 class="feature-title">Transparent Treatment Plans</h4>
+                <p class="feature-text">
+                  Clear written options and explanations provided in plain language, so you remain fully in control of your care.
+                </p>
+              </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="col-sm-6">
+              <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
+                  <i class="bi bi-flower1"></i>
+                </div>
+                <h4 class="feature-title">Calming Clinical Environment</h4>
+                <p class="feature-text">
+                  Soft ambient lighting, quiet instruments, and ergonomic chairs designed to help reduce sensory tension.
+                </p>
+              </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="col-sm-6">
+              <div class="bg-white p-4 rounded-4 shadow-sm h-100 border border-light">
+                <div class="feature-icon-wrapper mb-3" aria-hidden="true">
+                  <i class="bi bi-shield-heart"></i>
+                </div>
+                <h4 class="feature-title">Preventative Focus</h4>
+                <p class="feature-text">
+                  Thoughtful preventative advice and early maintenance that helps you preserve your natural teeth for a lifetime.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- "Your First Visit" Timeline (4 steps) -->
+  <section class="py-5 bg-white" aria-labelledby="first-visit-heading">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-kicker">Simple & Transparent</span>
+        <h2 id="first-visit-heading" class="section-title">Your First Visit: Step by Step</h2>
+        <p class="section-subtitle">
+          Wondering what to expect? Here is how we ensure your initial appointment is seamless and reassuring from start to finish.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="timeline-step-card">
+            <div class="timeline-step-badge">1</div>
+            <h4 class="timeline-step-title">Warm Welcome</h4>
+            <p class="timeline-step-text">
+              Check in with our friendly reception team and relax in our quiet, serene waiting lounge with refreshment options.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="timeline-step-card">
+            <div class="timeline-step-badge">2</div>
+            <h4 class="timeline-step-title">Comprehensive Check</h4>
+            <p class="timeline-step-text">
+              A gentle examination of teeth, gums, and soft tissues alongside digital imaging only where clinically necessary.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+          <div class="timeline-step-card">
+            <div class="timeline-step-badge">3</div>
+            <h4 class="timeline-step-title">Collaborative Plan</h4>
+            <p class="timeline-step-text">
+              We review findings together on screen, discuss your oral health goals, and outline potential options without rush.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+          <div class="timeline-step-card">
+            <div class="timeline-step-badge">4</div>
+            <h4 class="timeline-step-title">Care at Your Pace</h4>
+            <p class="timeline-step-text">
+              Any recommended care is scheduled entirely according to your timeline and preferences, keeping you comfortable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Band -->
+  <section class="cta-band" aria-label="Appointment Call to Action">
+    <div class="container text-center position-relative" style="z-index: 2;" data-aos="zoom-in">
+      <span class="text-teal text-uppercase fw-bold letter-spacing-1 d-block mb-2">Book With Confidence</span>
+      <h2 class="text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.75rem);">Ready for a calm, comfortable dental visit?</h2>
+      <p class="text-white-50 max-w-600 mx-auto mb-4" style="max-width: 600px;">
+        Our team welcomes individuals and families seeking unhurried, attentive oral healthcare. Reserve your preferred time online today.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn-primary-teal btn-pulse btn-shine">
+          <span>Book Your Appointment</span>
+          <i class="bi bi-calendar2-check"></i>
+        </a>
+        <a href="contact.html" class="btn-outline-custom">
+          <span>Get in Touch</span>
+          <i class="bi bi-chat-text"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Short FAQ Preview Section -->
+  <section class="py-5 bg-mint" aria-labelledby="faq-preview-heading">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-kicker">Got Questions?</span>
+        <h2 id="faq-preview-heading" class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Here are answers to a few common questions patients ask before their first visit.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9" data-aos="fade-up">
+          <div class="accordion custom-accordion" id="homeFaqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  How often should I have my teeth checked and cleaned?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Most people benefit from a routine dental check-up and professional hygiene clean every six months. However, depending on your individual oral health profile, gum conditions, and dental history, our clinician may recommend an interval tailored specifically to your needs.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  I feel anxious about visiting the dentist. How can you help?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Dental anxiety is very common, and our team is trained to provide gentle, empathetic care. We invite you to inform us when booking. We will explain every step beforehand, use stop-signals so you stay in control, and proceed strictly at a pace that feels safe and comfortable for you.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What should I bring to my first appointment?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Please bring photo identification, a list of current medications you take, and any previous dental records or recent radiographs if easily accessible. Arriving 10 minutes early allows you to settle into our reception lounge and complete your health history form comfortably.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="faq.html" class="btn btn-outline-secondary rounded-pill px-4">
+              <span>View All Common Questions</span>
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Injected Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Bootstrap 5 JS Bundle (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Site Components & Logic -->
+  <script src="/js/components.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

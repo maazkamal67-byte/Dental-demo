@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Appointment Booking | Smile Haven Dental</title>
+  <meta name="description" content="Request a dental appointment online or get in touch with Smile Haven Dental. Sample clinic contact details, opening hours, and booking form." />
+  <meta property="og:title" content="Contact & Appointment Booking | Smile Haven Dental" />
+  <meta property="og:description" content="Request an appointment or reach out to our team." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Injected Reusable Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Banner with Breadcrumb -->
+  <section class="page-hero" aria-label="Contact Page Hero">
+    <div class="page-hero-bg" aria-hidden="true">
+      <img 
+        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" 
+        alt="Welcoming dental clinic reception desk" 
+        width="1200"
+        height="500"
+        onerror="this.onerror=null;this.classList.add('img-fallback');"
+      />
+    </div>
+    <div class="page-hero-scrim" aria-hidden="true"></div>
+
+    <div class="container page-hero-content">
+      <div class="custom-breadcrumb" aria-label="Breadcrumb navigation">
+        <a href="index.html">Home</a>
+        <span class="divider">/</span>
+        <span>Contact & Booking</span>
+      </div>
+      <h1 class="page-hero-title">Contact & Appointments</h1>
+      <p class="page-hero-lead">
+        Reserve an unhurried consultation or reach out with inquiries. Our reception team is here to assist.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="wave-divider" aria-hidden="true" style="background: var(--navy);">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,0 C300,50 600,10 1200,45 L1200,60 L0,60 Z" fill="#F2FBFA"></path>
+    </svg>
+  </div>
+
+  <!-- Main Booking and Info Section -->
+  <section class="py-5 bg-mint" aria-labelledby="booking-heading">
+    <div class="container py-4">
+      <div class="row g-5">
+        <!-- Left: Appointment Request Form -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="booking-card">
+            <span class="section-kicker">Online Scheduling</span>
+            <h2 id="booking-heading" class="section-title mb-2">Book an Appointment</h2>
+            <p class="text-muted mb-4">
+              Complete the form below to request a convenient time. We will contact you promptly to confirm your visit.
+            </p>
+
+            <!-- Appointment Form -->
+            <form id="bookingForm" novalidate>
+              <div class="row g-3">
+                <!-- Full Name -->
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="fullName" 
+                    placeholder="e.g. Jane Doe" 
+                    required 
+                  />
+                  <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                  <input 
+                    type="tel" 
+                    class="form-control" 
+                    id="phone" 
+                    placeholder="e.g. 0000 000 0000" 
+                    required 
+                  />
+                  <div class="invalid-feedback">Please enter a valid contact phone number.</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    placeholder="name@example.com" 
+                    required 
+                  />
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <!-- Service Selection -->
+                <div class="col-md-6">
+                  <label for="serviceSelect" class="form-label">Desired Service <span class="text-danger">*</span></label>
+                  <select class="form-select" id="serviceSelect" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="Check-ups and Cleaning">Check-ups and Cleaning</option>
+                    <option value="Fillings">Tooth Fillings</option>
+                    <option value="Teeth Whitening">Teeth Whitening</option>
+                    <option value="Dental Implants">Dental Implants</option>
+                    <option value="Braces and Clear Aligners">Braces & Clear Aligners</option>
+                    <option value="Children's Dentistry">Children's Dentistry</option>
+                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                    <option value="Emergency Dental Care">Emergency Dental Care</option>
+                    <option value="General Consultation">General Examination & Discussion</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a service option.</div>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="col-md-6">
+                  <label for="appointmentDate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
+                  <input 
+                    type="date" 
+                    class="form-control" 
+                    id="appointmentDate" 
+                    required 
+                  />
+                  <div class="invalid-feedback">Please select a valid upcoming appointment date.</div>
+                </div>
+
+                <!-- Preferred Time Slot -->
+                <div class="col-md-6">
+                  <label for="preferredTime" class="form-label">Preferred Time Window <span class="text-danger">*</span></label>
+                  <select class="form-select" id="preferredTime" required>
+                    <option value="" disabled selected>Select a time window...</option>
+                    <option value="Morning (8:30 AM - 11:30 AM)">Morning (8:30 AM - 11:30 AM)</option>
+                    <option value="Midday (11:30 AM - 2:30 PM)">Midday (11:30 AM - 2:30 PM)</option>
+                    <option value="Afternoon (2:30 PM - 5:30 PM)">Afternoon (2:30 PM - 5:30 PM)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a preferred time slot.</div>
+                </div>
+
+                <!-- Message / Notes -->
+                <div class="col-12">
+                  <label for="patientMessage" class="form-label">Additional Notes or Health Questions (Optional)</label>
+                  <textarea 
+                    class="form-control" 
+                    id="patientMessage" 
+                    rows="3" 
+                    placeholder="Let us know if you feel nervous, have specific sensitivities, or have questions..."
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn-primary-teal btn-pulse btn-shine w-100 justify-content-center py-3 fs-6">
+                    <span>Submit Appointment Request</span>
+                    <i class="bi bi-send ms-1"></i>
+                  </button>
+                  <small class="text-muted d-block text-center mt-2">
+                    <i class="bi bi-info-circle me-1"></i> This is a concept demo form (front-end only).
+                  </small>
+                </div>
+              </div>
+            </form>
+
+            <!-- Animated Success Confirmation Card -->
+            <div id="formSuccessCard" class="form-success-card">
+              <div class="success-check-icon">
+                <i class="bi bi-check2"></i>
+              </div>
+              <h3 class="text-navy mb-2">Appointment Request Submitted!</h3>
+              <p class="text-muted mb-4 max-w-500 mx-auto">
+                Thank you for reaching out to Smile Haven Dental. In a live application, our front desk team would review your request and send a confirmation message.
+              </p>
+
+              <div class="bg-light p-3 rounded-3 text-start mb-4 border">
+                <h6 class="text-teal mb-2 fw-bold"><i class="bi bi-card-checklist me-1"></i> Request Summary (Sample):</h6>
+                <div class="small text-muted mb-1"><strong>Name:</strong> <span id="confirmName" class="text-dark"></span></div>
+                <div class="small text-muted mb-1"><strong>Service:</strong> <span id="confirmService" class="text-dark"></span></div>
+                <div class="small text-muted mb-1"><strong>Date:</strong> <span id="confirmDate" class="text-dark"></span></div>
+                <div class="small text-muted"><strong>Time Slot:</strong> <span id="confirmTime" class="text-dark"></span></div>
+              </div>
+
+              <button type="button" id="bookAnotherBtn" class="btn btn-outline-secondary rounded-pill px-4">
+                <span>Book Another Appointment</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Clinic Information, Hours & Map Box -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <!-- Contact Card -->
+          <div class="bg-white p-4 p-md-5 rounded-4 border shadow-sm mb-4">
+            <h3 class="section-title fs-3 mb-3">Clinic Information</h3>
+            <p class="text-muted mb-4">
+              Feel free to call or email our practice directly. We are happy to help answer any questions prior to booking.
+            </p>
+
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <div class="feature-icon-wrapper" aria-hidden="true" style="width: 42px; height: 42px; font-size: 1.15rem;">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <strong class="d-block text-navy">Location</strong>
+                <span class="text-muted">123 Sample Street, Your City</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <div class="feature-icon-wrapper" aria-hidden="true" style="width: 42px; height: 42px; font-size: 1.15rem;">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div>
+                <strong class="d-block text-navy">Telephone</strong>
+                <a href="tel:0000000000" class="text-muted text-decoration-none">0000 000 0000</a>
+                <small class="d-block text-muted">(Sample phone number)</small>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <div class="feature-icon-wrapper" aria-hidden="true" style="width: 42px; height: 42px; font-size: 1.15rem;">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <strong class="d-block text-navy">Email</strong>
+                <a href="mailto:hello@example.com" class="text-muted text-decoration-none">hello@example.com</a>
+              </div>
+            </div>
+
+            <hr class="border-light mb-4" />
+
+            <h4 class="fs-5 text-navy mb-3"><i class="bi bi-clock me-1 text-teal"></i> Clinic Hours (Sample)</h4>
+            <div class="d-flex justify-content-between text-muted small py-1 border-bottom">
+              <span>Monday – Friday</span>
+              <span class="text-dark fw-semibold">8:30 AM – 5:30 PM</span>
+            </div>
+            <div class="d-flex justify-content-between text-muted small py-1 border-bottom">
+              <span>Saturday</span>
+              <span class="text-dark fw-semibold">9:00 AM – 1:00 PM</span>
+            </div>
+            <div class="d-flex justify-content-between text-muted small py-1">
+              <span>Sunday & Holidays</span>
+              <span class="text-muted">Closed</span>
+            </div>
+          </div>
+
+          <!-- Embedded Map Placeholder Box -->
+          <div class="map-placeholder-box">
+            <div class="map-placeholder-icon" aria-hidden="true">
+              <i class="bi bi-pin-map-fill"></i>
+            </div>
+            <h5 class="text-navy fw-semibold mb-1" style="font-family: var(--font-sans);">Smile Haven Dental Location</h5>
+            <p class="text-muted small mb-3">123 Sample Street, Your City</p>
+            <div class="badge bg-white text-teal px-3 py-2 border shadow-xs fw-normal">
+              <i class="bi bi-info-circle me-1"></i> Interactive map placeholder for concept demo
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Injected Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
